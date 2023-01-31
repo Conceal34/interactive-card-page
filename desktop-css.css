@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    font-family: space Grotesk;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.layout {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+}
+.layout-2 {
+    width: 25vw;
+}
+
+.card {
+    position: absolute;
+}
+
+#card-front {
+    top: 10rem;
+    left: 10rem;
+}
+
+#card-back {
+    top: 28rem;
+    left: 15rem
+}
+
+.card-info {
+    color: hsl(270, 3%, 87%);
+    position: absolute;
+    font-size: 36px;
+    height: 36px;
+}
+
+.no-on-card {
+    font-size: 34px;
+    width: 370px;
+    left: 12rem;
+    top: 18rem;
+}
+
+.name-on-card {
+    width: 150px;
+    left: 12rem;
+    top: 22rem;
+    font-size: 22px;
+}
+
+.cvv-on-card {
+    width: 80px;
+    left: 35rem;
+    top: 34.5rem;
+    font-size: 22px;
+}
+
+.month-on-card {
+    width: 80px;
+    left: 24rem;
+    top: 22rem;
+    text-align: right;
+    font-size: 22px;
+}
+
+.yr-on-card {
+    width: 80px;
+    left: 30rem;
+    top: 22rem;
+    font-size: 22px;
+}
+
+p {
+    color: red;
+    font-size: 12px;
+}
+
+input {
+    width: 100%;
+    font-size: 18px;
+    padding: 5px 8px 2px ;
+    border: solid 1.5px rgb(176, 176, 176);
+    border-radius: 8px;
+}
+
+input:focus {
+    border: solid 1.5px hsl(249, 99%, 64%);
+    outline: 2px;
+}
+
+#date-cvc-line {
+    display: grid;
+    grid-template-columns:2fr 1.5fr ;
+    gap: 4px;
+}
+
+#month, #year {
+    width: 47%;
+    text-align: center;
+}
+
+.month-yr {
+    font-size: 12px;
+}
+
+.card-name-verifier, .card-no-verifier, .cvc-verifier {
+    height: 12px;
+}
+
+.month-verifier, .year-verifier {
+    line-height: 0.9;
+}
+
+#submit-btn {
+    margin-top: 0.5rem;
+    height: 3rem;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+}
+
+#submit-btn:hover {
+    cursor: pointer;
+}
+
+/* media-queries */
+
+@media only screen and (max-width: 1280px) {
+    .layout-2 {
+        width: 30vw;
+    }
+    #card-front {
+        left: 5rem;
+    }
+    #card-back {
+        left: 10rem
+    }
+    .no-on-card {
+        left: 7rem;
+    }
+    .name-on-card {
+        left: 7rem;
+    }
+    .cvv-on-card {
+        left: 30rem;
+    }
+    .month-on-card {
+        left: 19rem;
+    }   
+    .yr-on-card {
+        left: 25rem;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .layout-2 {
+        width: 35vw;
+    }
+
+    #card-front {
+        left: 3rem;
+    }
+
+    #card-back {
+        left: 6rem
+    }
+
+    .no-on-card {
+        left: 7rem;
+    }
+    
+    .name-on-card {
+        left: 7rem;
+    }
+    
+    .cvv-on-card {
+        left: 30rem;
+    }
+    
+    .month-on-card {
+        left: 19rem;
+    }
+    
+    .yr-on-card {
+        left: 25rem;
+    }
+}

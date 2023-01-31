@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card-detail-form</title>
+<!-- stylesheet -->
+    <link rel="stylesheet" href="desktop-css.css">
+<!-- favicon -->
+    <link rel="shortcut icon" href="interactive-card-details-form-main/images/favicon-32x32.png" type="image/x-icon">
+<!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layout">
+        
+        <!-- cards -->
+        <img src="interactive-card-details-form-main/images/bg-card-front.png" alt="" srcset="" class="card" id="card-front">
+        <img src="interactive-card-details-form-main/images/bg-card-back.png" alt="" srcset="" class="card" id="card-back">
+        
+        <!-- card info - live updated -->
+        <p class="name-on-card card-info">Jane</p>
+        <p class="no-on-card card-info">1234567891230000</p>
+        <p class="month-on-card card-info">MM</p>
+        <p class="yr-on-card card-info">YYYY</p>
+        <p class="cvv-on-card card-info">***</p>
+        
+        <div class="layout-1">
+            <img src="interactive-card-details-form-main/images/bg-main-desktop.png" alt="design-pic" srcset="" id="background-img">
+        </div>
+
+        <main class="layout-2">
+            <form action="" method="get">
+                <label for="">
+                    CARDHOLDER NAME
+                </label>
+                <br>
+                <input type="text" maxlength="15" name="" id="name-input" class="card-main" placeholder="e.g. Jane" required>
+                <br>
+                <p class="card-name-verifier">
+
+                </p>
+                <label for="">
+                    CARD NO.
+                </label>
+                <br>
+                <input type="text" minlength="16" maxlength="16" name="" id="card-no-input" class="card-main" placeholder="e.g. 1234 5678 9100 0000" required>
+                <br>
+                <p class="card-no-verifier">
+
+                </p>
+                <div id="date-cvc-line">
+                    <div class="date">
+                        <label for="">
+                            EXP DATE <span class="month-yr">(YYYY/MM)</span>
+                        </label>
+                        <br>
+                        <input type="text" maxlength="4" minlength="4" placeholder="YYYY" id="year" required>
+                        <input type="text" maxlength="2" minlength="1" placeholder="MM" id="month" required>
+                        <p class="month-verifier">
+
+                        </p>
+                        <p class="year-verifier">
+
+                        </p>
+                    </div>
+                    <div class="cvc">
+                        <label for="">
+                            CVC
+                        </label>
+                        <br>
+                        <input type="password" id="cvv-input" minlength="3" maxlength="3" placeholder="e.g. 123" required>
+                        <p class="cvc-verifier">
+
+                        </p>
+                    </div>
+                </div>
+                <input type="submit" value="Confirm" id="submit-btn">
+            </form>
+        </main>
+    </div>
+
+<!-- js-file -->
+    <script src="index.js"></script>
+</body>
+
+</html>
